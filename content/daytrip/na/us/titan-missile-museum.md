@@ -7,7 +7,6 @@ location: 1580 W. Duval Mine Road, Green Valley, Arizona 85614, USA
 title: Titan Missile Museum
 Poster: AndiBing
 external_url: https://titanmissilemuseum.org/
-OSMNode: https://www.openstreetmap.org/way/199309726
 ---
 Preserved Titan II missile silo. Lots of Cold War technology.
 Climb down into the bunker and a chance to 'launch' a missile!!
