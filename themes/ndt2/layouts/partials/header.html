@@ -1,10 +1,10 @@
 <header id="banner">
-    <h1><a href="{{ .Site.Home.Permalink | relURL }}">{{ .Site.Title }}</a></h1>
+    <h1><a href="{{ .Site.Home.Permalink | absURL }}">{{ .Site.Title }}</a></h1>
     <nav>
         <ul>
             {{ range .Site.Menus.main.ByWeight -}}
             <li>
-                {{ .Pre }}<a href="{{ .URL }}" title="{{ .Title }}" class="nav-link">
+                {{ .Pre }}<a href="{{ .URL | absURL }}" title="{{ .Title }}" class="nav-link">
                     {{- if .Params.icon -}}
                         <i class="{{- .Params.icon -}}"></i>
                         <span class="nav-text">{{- .Name -}}</span>
