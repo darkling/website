@@ -8,5 +8,5 @@ location: "The Hangers, Airfield Way, Ellesmere Port, CH65 1BQ"
 title: "Hooton Park Hangers "
 external_url: https://www.hootonparkhangars.co.uk/
 ---
-Historical WW2 aircraft hangers that are now used to house and restore historic aircraft and some other vehicles. 
+Historical WW1 aircraft hangers that are now used to house and restore historic aircraft and some other vehicles. 
 Also on site is a model RC boat club, printing museum and amater radio club. See website for details of open days.
