@@ -91,7 +91,13 @@ async function loadMarkers(L, map) {
 }
 
 // initialize Leaflet
-var map = L.map('map').setView({lon: 0, lat: 0}, 2);
+var map = L.map('map', {
+    maxBounds: [
+        [-85, -180],
+        [85, 180]
+    ],
+    maxBoundsViscosity: 0.5 // Gentle bounce at the edge
+}).setView({lon: 0, lat: 0}, 2);
 
 // add the OpenStreetMap tiles
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
