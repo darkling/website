@@ -1,12 +1,12 @@
 ---
 slug: "daytrip/na/us/thomas-edison-museum"
 title: Thomas Edison Museum
-location: West Orange, NJ, USA, 07052
+location: 211 Main Street, West Orange, NJ 07052, USA
 poster: lisa
 date: '2011-10-13T17:43:00'
 lat: '40.783902923933795'
 lng: '-74.23307917778016'
-external_url: null
+external_url: https://www.nps.gov/edis/index.htm
 ---
 
 Thomas Edison's actual laboratory.  Tours of his house in Llewellyn Park are also available.
