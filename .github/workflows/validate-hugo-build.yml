@@ -53,7 +53,7 @@ jobs:
       - name: Deploy to GitHub Pages (PR Preview)
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.BOT_GITHUB_TOKEN }}
           publish_dir: ./public
           destination_dir: pr-${{ github.event.number }}
           keep_files: true
@@ -118,6 +118,7 @@ jobs:
             git config --local user.email "action@github.com"
             git config --local user.name "GitHub Action"
             git add .
+            git pull --rebase origin gh-pages
             git commit -m "Remove preview for PR #${PR_NUMBER}" || exit 0
             git push
           fi
