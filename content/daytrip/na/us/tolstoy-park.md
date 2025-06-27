@@ -5,7 +5,7 @@ location: Montrose Office Park, 22979 US-98, Fairhope, Alabama, United States
 poster: Basic Cable
 date: '2012-06-15T12:53:00'
 lat: 30.5566
-lng: -87.8942,
+lng: -87.8942
 external_url: https://en.wikipedia.org/wiki/Tolstoy_Park
 ---
 
