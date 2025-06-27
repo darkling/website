@@ -1,10 +1,10 @@
 ---
 slug: "daytrip/na/us/watts-towers"
 date: '2001-01-30T04:37:00'
-lat: '33.935448'
-lng: '-118.241155'
-location: 10992, Willowbrook Avenue, Watts, Los Angeles, Los Angeles County, California,
-  90059, United States
+lat: 33.938742
+lng: -118.241140
+location: 1727 E 107th St, Los Angeles, California 90002, United States
+external_url: https://www.wattstowers.org/
 title: Watts Towers
 ---
 

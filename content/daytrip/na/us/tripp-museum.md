@@ -1,10 +1,10 @@
 ---
 slug: "daytrip/na/us/tripp-museum"
 date: '2001-01-30T04:37:00'
-lat: '43.28838551857924'
-lng: '-89.72576342939453'
-location: 350, 6th Street, Village of Prairie du Sac, Sauk County, Wisconsin, 53578,
-  United States
+lat: 43.291385
+lng: -89.721528
+location: 565 Water Street, Prairie du Sac, Wisconsin, 53578, United States
+external_url: https://www.saukprairiehistory.org/about.html
 title: Tripp Museum
 ---
 
