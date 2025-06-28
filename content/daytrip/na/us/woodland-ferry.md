@@ -1,7 +1,7 @@
 ---
 slug: "daytrip/na/us/woodland-ferry"
 title: Woodland Ferry
-location: Seaford, DE, USA, 19973
+location: Woodland Ferry Road, Seaford, DE, USA
 poster: Vagrarian
 date: '2012-05-07T01:00:00'
 lat: '38.59930642299575'
