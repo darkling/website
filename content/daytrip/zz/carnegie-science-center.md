@@ -1,5 +1,5 @@
 ---
-slug: "daytrip/zz/carnegie-science-center_3963"
+slug: "daytrip/zz/carnegie-science-center"
 date: "2025-06-13T12:26:00.000Z"
 poster: "AndiBing"
 title: Carnegie Science Center

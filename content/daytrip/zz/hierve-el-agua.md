@@ -1,5 +1,5 @@
 ---
-slug: "daytrip/zz/hierve-el-agua_4093"
+slug: "daytrip/zz/hierve-el-agua"
 date: '2001-01-30T04:37:00'
 lat: '16.879274074538092'
 lng: '-96.20171211425782'

@@ -1,5 +1,5 @@
 ---
-slug: "daytrip/zz/essauoira-and-gnawa-festival_4365"
+slug: "daytrip/zz/essauoira-and-gnawa-festival"
 date: '2001-01-30T04:37:00'
 lat: '31.50346264430473'
 lng: '-9.766088945312504'

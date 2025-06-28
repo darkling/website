@@ -1,5 +1,5 @@
 ---
-slug: "daytrip/zz/prestige-night-club_4192"
+slug: "daytrip/zz/prestige-night-club"
 date: '2001-01-30T04:37:00'
 lat: '35.92353488538496'
 lng: '14.489800410823818'

@@ -1,5 +1,5 @@
 ---
-slug: "daytrip/zz/matka-canyon_4279"
+slug: "daytrip/zz/matka-canyon"
 date: '2001-01-30T04:37:00'
 lat: '42.05526578502706'
 lng: '21.396630781249996'

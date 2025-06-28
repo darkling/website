@@ -1,5 +1,5 @@
 ---
-slug: "daytrip/zz/new-cairo_3941"
+slug: "daytrip/zz/new-cairo"
 date: '2001-01-30T04:37:00'
 lat: '30.059175083976395'
 lng: '31.45818285878181'

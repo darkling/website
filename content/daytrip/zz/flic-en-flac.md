@@ -1,5 +1,5 @@
 ---
-slug: "daytrip/zz/flic-en-flac_4350"
+slug: "daytrip/zz/flic-en-flac"
 date: '2001-01-30T04:37:00'
 lat: '-20.280416'
 lng: '57.364496'

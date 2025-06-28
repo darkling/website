@@ -1,5 +1,5 @@
 ---
-slug: "daytrip/zz/deception-island_1675"
+slug: "daytrip/zz/deception-island"
 title: Deception Island
 location: Antarctica, STHPLE
 poster: LadeeNerd

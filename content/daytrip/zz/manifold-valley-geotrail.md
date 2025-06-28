@@ -1,5 +1,5 @@
 ---
-slug: "daytrip/zz/manifold-valley-geotrail_3043"
+slug: "daytrip/zz/manifold-valley-geotrail"
 title: Manifold Valley Geotrail
 location: Stoke on Trent, Staffordshire, false, ST10 3HL
 poster: cheekymonkey75

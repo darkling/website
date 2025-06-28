@@ -1,5 +1,5 @@
 ---
-slug: "daytrip/zz/the-new-library-of-alexandria_4038"
+slug: "daytrip/zz/the-new-library-of-alexandria"
 date: '2001-01-30T04:37:00'
 lat: '31.21154234962126'
 lng: '29.916260021286007'

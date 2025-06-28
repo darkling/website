@@ -1,5 +1,5 @@
 ---
-slug: "daytrip/zz/icelandic-national-gallery_4353"
+slug: "daytrip/zz/icelandic-national-gallery"
 date: '2001-01-30T04:37:00'
 lat: '64.143987'
 lng: '-21.939187'

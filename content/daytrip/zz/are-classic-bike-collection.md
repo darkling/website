@@ -1,5 +1,5 @@
 ---
-slug: "daytrip/zz/are-classic-bike-collection_4706"
+slug: "daytrip/zz/are-classic-bike-collection"
 date: '2001-01-30T04:37:00'
 lat: '54.2984090'
 lng: '-4.5801668'

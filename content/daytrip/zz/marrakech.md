@@ -1,5 +1,5 @@
 ---
-slug: "daytrip/zz/marrakech_4363"
+slug: "daytrip/zz/marrakech"
 date: '2001-01-30T04:37:00'
 lat: '31.636847563393804'
 lng: '-8.005529863281254'

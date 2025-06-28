@@ -1,5 +1,5 @@
 ---
-slug: "daytrip/zz/katas-raj-mandir_4514"
+slug: "daytrip/zz/katas-raj-mandir"
 date: '2001-01-30T04:37:00'
 lat: '32.724164418883'
 lng: '72.9518630306153'

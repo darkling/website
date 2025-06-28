@@ -1,5 +1,5 @@
 ---
-slug: "daytrip/zz/palmyra_4033"
+slug: "daytrip/zz/palmyra"
 date: '2001-01-30T04:37:00'
 lat: '34.52902603172624'
 lng: '38.266137617187496'

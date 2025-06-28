@@ -1,5 +1,5 @@
 ---
-slug: "daytrip/zz/national-museum-of-kraljevo_4368"
+slug: "daytrip/zz/national-museum-of-kraljevo"
 date: '2001-01-30T04:37:00'
 lat: '43.7259387761377'
 lng: '20.68170406158447'

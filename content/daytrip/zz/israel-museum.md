@@ -1,5 +1,5 @@
 ---
-slug: "daytrip/zz/israel-museum_3735"
+slug: "daytrip/zz/israel-museum"
 date: '2001-01-30T04:37:00'
 lat: '31.76770636152647'
 lng: '35.203698652343746'

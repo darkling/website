@@ -1,5 +1,5 @@
 ---
-slug: "daytrip/zz/bagh-ibne-qasim_3720"
+slug: "daytrip/zz/bagh-ibne-qasim"
 date: '2001-01-30T04:37:00'
 lat: '24.80894139774062'
 lng: '67.02457093945304'

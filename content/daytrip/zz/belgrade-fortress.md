@@ -1,5 +1,5 @@
 ---
-slug: "daytrip/zz/belgrade-fortress_4367"
+slug: "daytrip/zz/belgrade-fortress"
 date: '2001-01-30T04:37:00'
 lat: '44.82435656999818'
 lng: '20.45120574768066'

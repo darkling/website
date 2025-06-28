@@ -1,5 +1,5 @@
 ---
-slug: "daytrip/zz/khewra-salt-mines_4513"
+slug: "daytrip/zz/khewra-salt-mines"
 date: '2001-01-30T04:37:00'
 lat: '32.646668'
 lng: '73.006443'

@@ -1,5 +1,5 @@
 ---
-slug: "daytrip/zz/manchester-nh_4180"
+slug: "daytrip/zz/manchester-nh"
 title: Manchester, NH
 location: null
 lat: '41.775604'

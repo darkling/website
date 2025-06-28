@@ -1,5 +1,5 @@
 ---
-slug: "daytrip/zz/atlas-mountains-trek_4705"
+slug: "daytrip/zz/atlas-mountains-trek"
 title: Atlas Mountains Trek
 location: Marrakech, Marrakech, Maroc, P2118
 poster: toubkaltrekking

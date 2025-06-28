@@ -1,5 +1,5 @@
 ---
-slug: "daytrip/zz/sanatorio-durán-ghost-hunter-international-site_4489"
+slug: "daytrip/zz/sanatorio-durán-ghost-hunter-international-site"
 title: Sanatorio Durán - Ghost Hunter International Site
 location: Oreamuno, Cartago, Costa Rica, 219
 poster: diego wolf

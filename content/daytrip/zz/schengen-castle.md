@@ -1,5 +1,5 @@
 ---
-slug: "daytrip/zz/schengen-castle_4036"
+slug: "daytrip/zz/schengen-castle"
 date: '2001-01-30T04:37:00'
 lat: '49.46967037719513'
 lng: '6.366475599365231'

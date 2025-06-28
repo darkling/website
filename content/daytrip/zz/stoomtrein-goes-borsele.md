@@ -1,5 +1,5 @@
 ---
-slug: "daytrip/zz/stoomtrein-goes-borsele_4433"
+slug: "daytrip/zz/stoomtrein-goes-borsele"
 date: '2001-01-30T04:37:00'
 lat: '51.49814438231228'
 lng: '3.885603690295511'

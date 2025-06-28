@@ -1,5 +1,5 @@
 ---
-slug: "daytrip/zz/holiday-home-villa-kibrahacha_4501"
+slug: "daytrip/zz/holiday-home-villa-kibrahacha"
 title: Holiday Home Villa Kibrahacha
 location: Fontein, The road to beaches Cas Aboa; Daaibooi & Porta Marie, Curacao,
   SEBASTIAN

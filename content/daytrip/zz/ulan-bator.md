@@ -1,5 +1,5 @@
 ---
-slug: "daytrip/zz/ulan-bator_4065"
+slug: "daytrip/zz/ulan-bator"
 date: '2001-01-30T04:37:00'
 lat: '47.928175'
 lng: '106.902536'

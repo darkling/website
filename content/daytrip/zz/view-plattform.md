@@ -1,5 +1,5 @@
 ---
-slug: "daytrip/zz/view-plattform_4452"
+slug: "daytrip/zz/view-plattform"
 date: '2001-01-30T04:37:00'
 lat: '38.588689485439254'
 lng: '128.37110644726567'

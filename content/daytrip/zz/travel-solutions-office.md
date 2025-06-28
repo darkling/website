@@ -1,5 +1,5 @@
 ---
-slug: "daytrip/zz/travel-solutions-office_4877"
+slug: "daytrip/zz/travel-solutions-office"
 title: Travel Solution's Office
 location: E87, Burgas, %u0411%u044A%u043B%u0433%u0430%u0440%u0438%u044F, 8240
 poster: kstanishev
