@@ -12,11 +12,12 @@ Blimey, what a couple of weeks it's been! I honestly wasn't expecting quite this
 Let's dive into the stats, because I know at least three of you reading this will appreciate them:
 
 Since June 11th:
-* **185** new places added 
-* **25** locations removed (mostly because someone's idea of "nerdy" was a bit... loose)
-* **250** edits to existing locations - people actually care about getting the details right
-* Around **20** code tweaks to keep the site from falling over
-* **25** new issues raised, with **20** already sorted
+
+ * **185** new places added 
+ * **25** locations removed (mostly because someone's idea of "nerdy" was a bit... loose)
+ * **250** edits to existing locations - people actually care about getting the details right
+ * Around **20** code tweaks to keep the site from falling over
+ * **25** new issues raised, with **20** already sorted
 
 Not bad for a side project that started as "wouldn't it be nice if..."
 
