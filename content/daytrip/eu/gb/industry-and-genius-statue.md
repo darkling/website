@@ -5,6 +5,7 @@ lat: '52.47967182880559'
 lng: '-1.907187027378086'
 location: Centenary Square, Ladywood, Park Central, Birmingham, West Midlands, England,
   B1 2NR, United Kingdom
+external_url: https://www.birmingham.gov.uk/info/50050/culture_arts_and_heritage/190/statues_and_public_art/5
 title: Industry and Genius Statue
 ---
 
