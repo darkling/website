@@ -4,6 +4,7 @@ date: '2001-01-30T04:37:00'
 lat: 53.484278
 lng: -2.061296
 location: 11 Market Street, Stalybridge, SK15 2AL
+external_url: https://www.facebook.com/people/The-Old-Thirteenth-Cheshire-Astley-Volunteer-Rifleman-Corps-Inn/100063759722565/
 title: The Old Thirteenth Cheshire Astley Volunteer Rifleman Corps Inn
 ---
 The pub with the longest name in Britain. Sadly, not the same location
