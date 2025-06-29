@@ -1,5 +1,5 @@
 ---
-slug: 'daytrip/zz/gd/parque-de-las-ciencias-andaluca'
+slug: 'daytrip/eu/es/parque-de-las-ciencias-andaluca'
 date: '2025-05-29T12:10:58.165Z'
 lat: '37.162685'
 lng: '-3.605801'
