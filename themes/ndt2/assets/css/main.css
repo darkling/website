@@ -739,6 +739,7 @@ main#content:has(> article) {
 }
 
 .user-location-icon {
+  font-size: 5em;
   background: none;
   border: none;
   display: flex;
