@@ -474,8 +474,8 @@ html, body {
 
 #map .leaflet-popup-content { 
   color: #222; 
-  width: 400px;
-  height: 200px;
+  width: auto;
+  height: auto;
   line-height: 1.4;
   font-weight: normal;
   font-size: 1em; 
@@ -495,6 +495,13 @@ html, body {
 
 #map .leaflet-popup-content .popup-poster { 
   font-size: 1.8em; 
+  font-weight: normal;
+  color: #000000;
+  font-style: italic;
+}
+
+#map .leaflet-popup-content .you-header { 
+  font-size: 3.0em; 
   font-weight: normal;
   color: #000000;
   font-style: italic;
@@ -730,6 +737,7 @@ main#content:has(> article) {
 }
 
 .user-location-icon {
+  font-size: 5em;
   background: none;
   border: none;
   display: flex;
