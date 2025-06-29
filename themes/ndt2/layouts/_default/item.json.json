@@ -1,10 +1,10 @@
 {
     "name": "{{ .Title | htmlEscape }}",
-    "permalink": "{{ .RelPermalink }}",
-    "lat": "{{ .Params.lat }}",
-    "lng": "{{ .Params.lng }}"{{ if .Params.poster }},
-    "poster": "{{ .Params.poster }}"{{ end }}{{ if .Params.location }},
-    "location": "{{ .Params.location }}"{{ end }}{{ if .Params.external_url }},
-    "external_url": "{{ .Params.external_url }}"{{ end }}{{ if .Content }},
-    "description": {{ .Content | plainify | truncate 200 | replaceRE "\n" " " | chomp | jsonify }}{{ end }}
+    "permalink": {{ .RelPermalink | jsonify}},
+    "lat": {{ .Params.lat | jsonify}},
+    "lng": {{ .Params.lng | jsonify}},
+    "poster": {{ if .Params.poster }}{{ .Params.poster | jsonify }}{{ else}}""{{ end }},
+    "location": {{ if .Params.location }}{{ .Params.location | jsonify }}{{ else}}""{{ end }},
+    "external_url": {{ if .Params.external_url }}{{ .Params.external_url | jsonify }}{{ else}}""{{ end }},
+    "description": {{ if .Content }}{{ .Content | plainify | truncate 200 | replaceRE "\n" " " | chomp | jsonify }}{{ else}}""{{ end }}
 }
