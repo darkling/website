@@ -68,9 +68,9 @@ async function loadMarkers(L, map) {
                 if (v.external_url) {
                     popupText += `&nbsp;&nbsp;<a href="${v.external_url}" target="_blank" class="external-link" title="Website"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>`;
                 }
-                // If the venue has a location, append it to the popup text
-                if (v.location) {
-                    popupText += `<br><div class="popup-location">${v.location}</div>`;
+                // If the venue has a description, append it to the popup text
+                if (v.description) {
+                    popupText += `<br><div class="popup-description">${v.description}</div>`;
                 }
                 // If the venue has a poster, add it to the popup
                 if (v.poster) {
@@ -209,9 +209,9 @@ map.on('locationfound', function(e) {
     const userLocationIcon = L.divIcon({
         html: '📍',
         className: 'user-location-icon',
-        iconSize: [40, 40],
+        iconSize: [64, 64],
         iconAnchor: [20, 40],
-        popupAnchor: [0, -40]
+        popupAnchor: [10, -20]
     });
     
     // Add a marker at the user's location with the custom pin icon
@@ -219,7 +219,7 @@ map.on('locationfound', function(e) {
         map.removeLayer(window._userLocationMarker);
     }
     window._userLocationMarker = L.marker(e.latlng, {icon: userLocationIcon}).addTo(map)
-        .bindPopup('You are here!').openPopup();
+        .bindPopup('<div class="you-header">You are here!</div>').openPopup();
     // Auto-close the popup after 3 seconds
     setTimeout(function() {
         if (window._userLocationMarker) {
