@@ -476,6 +476,8 @@ html, body {
   color: #222; 
   width: auto;
   height: auto;
+  max-width: 90vw; /* Prevent overly wide popups */
+  max-height: 80vh; /* Prevent overly tall popups */
   line-height: 1.4;
   font-weight: normal;
   font-size: 1em; 
@@ -487,7 +489,7 @@ html, body {
   color: #02b1ec;
 }
 
-#map .leaflet-popup-content .popup-location { 
+#map .leaflet-popup-content .popup-description { 
   font-size: 2em; 
   font-weight: normal;
   color: #000000;
@@ -737,7 +739,6 @@ main#content:has(> article) {
 }
 
 .user-location-icon {
-  font-size: 5em;
   background: none;
   border: none;
   display: flex;

@@ -6,5 +6,5 @@
     "poster": "{{ .Params.poster }}"{{ end }}{{ if .Params.location }},
     "location": "{{ .Params.location }}"{{ end }}{{ if .Params.external_url }},
     "external_url": "{{ .Params.external_url }}"{{ end }}{{ if .Content }},
-    "description": "{{ .Content | plainify | truncate 200 | replaceRE "\n" " " | chomp }}"{{ end }}
+    "description": {{ .Content | plainify | truncate 200 | replaceRE "\n" " " | chomp | jsonify }}{{ end }}
 }
