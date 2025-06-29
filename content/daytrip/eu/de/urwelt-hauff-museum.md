@@ -4,7 +4,7 @@ date: '2025-06-12T10:37:00'
 lat: '48.63540'
 lng: '9.52812'
 poster: "sebastian-xyz"
-location: "Urwelt-Hauff Museum, Aichelberger Straße 90, Holzmaden, Baden-Württemberg, 73271, Deutschland"
+location: "Aichelberger Straße 90, Holzmaden, Baden-Württemberg, 73271, Deutschland"
 title: Urwelt-Hauff Museum
 external_url: https://www.urweltmuseum.de/english
 ---
