@@ -45,6 +45,11 @@ slug: "search"
 .distance {
   font-style: italic;
   }
+h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
 </style>
 <script>
 let markersLayer; // To store and manage result markers
@@ -403,7 +408,7 @@ function renderResults(lunrRes) {
         // Add marker to map
         if (!isNaN(r.lat) && !isNaN(r.lng)) {
             const marker = L.marker([r.lat, r.lng])
-                .bindPopup(`<a href="../${r.permalink}">${tempDiv.textContent}</a>`)
+                .bindPopup(`<h1><a href="../${r.permalink}">${tempDiv.textContent}</a></h1>`)
                 .addTo(markersLayer);
                 
             // Extend bounds to include this marker
