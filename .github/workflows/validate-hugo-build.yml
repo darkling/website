@@ -20,8 +20,8 @@ jobs:
     env:
       HUGO_CACHEDIR: /tmp/hugo_cache
     concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
-      cancel-in-progress: true
+      group: "gh-pages-deploy"
+      cancel-in-progress: false 
     steps:
       - uses: actions/checkout@v4
         with:
