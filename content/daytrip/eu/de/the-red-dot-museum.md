@@ -2,8 +2,8 @@
 slug: "daytrip/eu/de/the-red-dot-museum"
 date: "2025-07-01T11:09:44.836Z"
 poster: "Roamer"
-lat: "51.487872"
-lng: "7.0425693"
+lat: "51.4877063" 
+lng: "7.0450496"
 location: "Gelsenkirchener Str. 181, 45309 Essen, Germany"
 title: "The Red Dot museum"
 external_url: https://www.red-dot-design-museum.de/essen
