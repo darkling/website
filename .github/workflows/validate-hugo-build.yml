@@ -5,12 +5,11 @@ on:
   pull_request:
     types: [opened, synchronize, reopened, closed]
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: write
   pages: write
   id-token: write
-  issues: write # Needed for commenting on PRs
+  issues: write
   pull-requests: write
 
 jobs:
@@ -19,9 +18,10 @@ jobs:
     if: github.event.action != 'closed'
     env:
       HUGO_CACHEDIR: /tmp/hugo_cache
+    # Per-PR concurrency - cancels old builds for same PR only
     concurrency:
-      group: "gh-pages-deploy"
-      cancel-in-progress: false 
+      group: "pr-preview-${{ github.event.number }}"
+      cancel-in-progress: true
     steps:
       - uses: actions/checkout@v4
         with:
@@ -50,13 +50,51 @@ jobs:
 
           hugo --minify --baseURL="${BASE_URL}"
 
-      - name: Deploy to GitHub Pages (PR Preview)
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.BOT_GITHUB_TOKEN }}
-          publish_dir: ./public
-          destination_dir: pr-${{ github.event.number }}
-          keep_files: true
+      # ALTERNATIVE APPROACH: Deploy with conflict resolution
+      - name: Deploy to GitHub Pages with retry and conflict resolution
+        env:
+          GITHUB_TOKEN: ${{ secrets.BOT_GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.number }}
+        run: |
+          # Configure git
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+          
+          # Clone gh-pages branch
+          git clone --single-branch --branch gh-pages "https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git" gh-pages-repo
+          cd gh-pages-repo
+          
+          # Create/update PR directory
+          mkdir -p "pr-${PR_NUMBER}"
+          rm -rf "pr-${PR_NUMBER}"/*
+          cp -r ../public/* "pr-${PR_NUMBER}/"
+          
+          # Add and commit changes
+          git add .
+          
+          # Only commit if there are changes
+          if ! git diff --staged --quiet; then
+            git commit -m "Deploy preview for PR #${PR_NUMBER}"
+            
+            # Retry push with conflict resolution
+            for i in {1..10}; do
+              if git push origin gh-pages; then
+                echo "✅ Successfully deployed PR #${PR_NUMBER}"
+                break
+              else
+                echo "⚠️  Push failed (attempt $i/10), resolving conflicts..."
+                git pull --rebase origin gh-pages
+                sleep $((i * 2))  # Exponential backoff
+              fi
+              
+              if [ $i -eq 10 ]; then
+                echo "❌ Failed to deploy after 10 attempts"
+                exit 1
+              fi
+            done
+          else
+            echo "ℹ️  No changes detected for PR #${PR_NUMBER}"
+          fi
 
       - name: Comment PR with preview link
         uses: actions/github-script@v7
@@ -68,7 +106,6 @@ jobs:
             const repoOwner = context.repo.owner;
             const previewUrl = `https://${repoOwner}.github.io/${repoName}/pr-${prNumber}/`;
 
-            // Find existing comment
             const comments = await github.rest.issues.listComments({
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -84,7 +121,6 @@ jobs:
             This preview will be automatically cleaned up when the PR is closed.`;
 
             if (botComment) {
-              // Update existing comment
               await github.rest.issues.updateComment({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
@@ -92,7 +128,6 @@ jobs:
                 body: commentBody
               });
             } else {
-              // Create new comment
               await github.rest.issues.createComment({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
@@ -105,40 +140,38 @@ jobs:
     runs-on: ubuntu-22.04
     if: github.event.action == 'closed'
     steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: gh-pages
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Remove PR preview directory and Push
+      - name: Clean up PR preview
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.number }}
         run: |
-          PR_NUMBER=${{ github.event.number }}
-          DIR_TO_REMOVE="pr-${PR_NUMBER}" # Corrected indentation here
-
-          # Check if the directory exists before proceeding
-          if [ ! -d "${DIR_TO_REMOVE}" ]; then
-            echo "Directory ${DIR_TO_REMOVE} does not exist, nothing to clean up."
-            exit 0 # Exit successfully if no directory found
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+          
+          # Clone gh-pages branch
+          git clone --single-branch --branch gh-pages "https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git" gh-pages-repo
+          cd gh-pages-repo
+          
+          # Remove PR directory if it exists
+          if [ -d "pr-${PR_NUMBER}" ]; then
+            rm -rf "pr-${PR_NUMBER}"
+            git add .
+            git commit -m "Remove preview for PR #${PR_NUMBER}"
+            
+            # Retry push with conflict resolution
+            for i in {1..5}; do
+              if git push origin gh-pages; then
+                echo "✅ Successfully cleaned up PR #${PR_NUMBER}"
+                break
+              else
+                echo "⚠️  Cleanup push failed (attempt $i/5), resolving conflicts..."
+                git pull --rebase origin gh-pages
+                sleep $((i * 2))
+              fi
+            done
+          else
+            echo "ℹ️  No directory found for PR #${PR_NUMBER}"
           fi
-
-          rm -rf "${DIR_TO_REMOVE}"
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add .
-          git commit -m "Remove preview for PR #${PR_NUMBER}"
-
-          # Loop to attempt push, pulling and rebasing if necessary
-          # This handles concurrent writes more gracefully
-          for i in {1..5}; do
-            if git push; then
-              echo "Successfully pushed changes."
-              break
-            else
-              echo "Push failed, attempting to pull and rebase (attempt $i of 5)..."
-              git pull --rebase origin gh-pages || { echo "Pull --rebase failed, abandoning push attempt."; exit 1; }
-              sleep 2 # Wait a bit before retrying
-            fi
-          done || { echo "Failed to push after multiple attempts."; exit 1; }
 
       - name: Update PR with cleanup message
         uses: actions/github-script@v7
