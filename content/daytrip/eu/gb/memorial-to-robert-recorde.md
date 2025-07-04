@@ -8,5 +8,5 @@ location: "St. Mary's Church, Tenby, Pembrokeshire, Wales, SA70 7AA, United King
 title: "Memorial to Robert Recorde"
 external_url: https://www.findagrave.com/memorial/184100268/robert-recorde
 ---
-Memorial to [Robert Recorde](https://en.wikipedia.org/wiki/Robert_Recorde) who invented the [equals sign](https://en.wikipedia.org/wiki/Equals_sign). Located inside [St_Mary's_Church](https://en.wikipedia.org/wiki/St_Mary%27s_Church,_Tenby) in Tenby.
+Memorial to [Robert Recorde](https://en.wikipedia.org/wiki/Robert_Recorde) who invented the [equals sign](https://en.wikipedia.org/wiki/Equals_sign). Located inside [St Mary's Church](https://en.wikipedia.org/wiki/St_Mary%27s_Church,_Tenby) in Tenby.
 
