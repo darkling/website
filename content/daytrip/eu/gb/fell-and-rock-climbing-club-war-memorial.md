@@ -10,7 +10,7 @@ external_url: https://www.frcc.co.uk/wp-content/uploads/2018/06/1a.-The-Memorial
 ---
 The [plaque](https://www.iwm.org.uk/memorials/item/memorial/3961) is on the summit of [Great Gable](https://en.wikipedia.org/wiki/Great_Gable).
 
-The [Fell & Rock Climbing Club](https://en.wikipedia.org/wiki/Fell_%26_Rock_Climbing_Club) also gifted the surrounding land, including Great Gable, to the National Trust as a war memorial for those members who were killed in the [First World War](https://en.wikipedia.org/wiki/World_War_I).
+The [Fell & Rock Climbing Club](https://en.wikipedia.org/wiki/Fell_%26_Rock_Climbing_Club) also gifted the surrounding land, including Great Gable, to the [National Trust](https://en.wikipedia.org/wiki/National_Trust) as a war memorial for those members who were killed in the [First World War](https://en.wikipedia.org/wiki/World_War_I).
 
 The [inscription](https://en.wikipedia.org/wiki/Great_Gable#/media/File:War_memorial_great_gable.jpg) reads
 
@@ -36,10 +36,3 @@ H.L.SLINGSBY: G.C.TURNER: B.H.WHITLEY:
 J.H.WHITWORTH: C.S.WORTHINGTON.
 
 ---
-
- 
-
- 
-
-
-https://en.wikipedia.org/wiki/Fell_%26_Rock_Climbing_Club
