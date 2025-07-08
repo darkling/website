@@ -34,12 +34,23 @@ jobs:
           hugo-version: '0.147.2'
           extended: true
 
-      - uses: actions/cache@v4
+      # Cache Hugo modules
+      - name: Cache Hugo modules
+        uses: actions/cache@v4
         with:
           path: ${{ env.HUGO_CACHEDIR }}
           key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
           restore-keys: |
             ${{ runner.os }}-hugomod-
+
+      # Cache Hugo resources (where generated images are stored)
+      - name: Cache Hugo resources
+        uses: actions/cache@v4
+        with:
+          path: resources
+          key: ${{ runner.os }}-hugo-resources-${{ hashFiles('content/**', 'assets/**', 'static/**', 'config.*') }}
+          restore-keys: |
+            ${{ runner.os }}-hugo-resources-
 
       - name: Build with PR-specific base URL
         run: |
