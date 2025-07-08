@@ -48,8 +48,11 @@ jobs:
         uses: actions/cache@v4
         with:
           path: resources
-          key: ${{ runner.os }}-hugo-resources-${{ hashFiles('content/**', 'assets/**', 'static/**', 'config.*') }}
+          key: ${{ runner.os }}-hugo-resources-${{ hashFiles('config.*', 'assets/**', 'static/**') }}-${{ github.sha }}
           restore-keys: |
+            ${{ runner.os }}-hugo-resources-${{ hashFiles('config.*', 'assets/**', 'static/**') }}-
+            ${{ runner.os }}-hugo-resources-${{ hashFiles('config.*', 'assets/**') }}-
+            ${{ runner.os }}-hugo-resources-${{ hashFiles('config.*') }}-
             ${{ runner.os }}-hugo-resources-
 
       - name: Build with PR-specific base URL
