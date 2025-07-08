@@ -55,20 +55,22 @@ jobs:
             hugo-resources-v1-
             hugo-resources-
 
-      - name: Build with PR-specific base URL
-        if: github.event_name == 'pull_request'
+      - name: Build site
         run: |
-          PR_NUMBER=${{ github.event.number }}
-          REPO_NAME=${{ github.event.repository.name }}
-          GITHUB_USERNAME=${{ github.repository_owner }}
-          BASE_URL="https://${GITHUB_USERNAME}.github.io/${REPO_NAME}/pr-${PR_NUMBER}/"
-
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            # PR build with PR-specific URL
+            PR_NUMBER=${{ github.event.number }}
+            REPO_NAME=${{ github.event.repository.name }}
+            GITHUB_USERNAME=${{ github.repository_owner }}
+            BASE_URL="https://${GITHUB_USERNAME}.github.io/${REPO_NAME}/pr-${PR_NUMBER}/"
+            echo "Building PR with baseURL: ${BASE_URL}"
+          else
+            # Main branch build with production URL
+            BASE_URL="https://nerdydaytrips.com/"
+            echo "Building main branch with baseURL: ${BASE_URL}"
+          fi
+          
           hugo --minify --baseURL="${BASE_URL}"
-
-      - name: Build for cache seeding (main branch)
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        run: |
-          hugo --minify
 
       # ALTERNATIVE APPROACH: Deploy with conflict resolution
       - name: Deploy to GitHub Pages with retry and conflict resolution
