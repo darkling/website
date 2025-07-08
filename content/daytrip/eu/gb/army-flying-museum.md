@@ -8,4 +8,4 @@ location: " Middle Wallop, Hampshire, England, SO20 8FB, United Kingdom"
 title: "Army Flying Museum"
 external_url: https://www.armyflying.com/
 ---
-The Museum holds an extensive collection charting over 100 years of the British Army in the air.
+The Museum holds an extensive collection charting over 100 years of the [British Army](https://en.wikipedia.org/wiki/British_Army) in the air.
