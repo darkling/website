@@ -14,12 +14,12 @@ jobs:
       issues: write
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+        uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: '0.120.4'
           extended: true
@@ -28,7 +28,7 @@ jobs:
         run: hugo --minify
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 16
 
@@ -37,7 +37,7 @@ jobs:
 
       - name: Get changed files
         id: changed-files
-        uses: tj-actions/changed-files@v38
+        uses: tj-actions/changed-files@v46
         with:
           files: 'content/daytrip/**/*.md'
 
@@ -174,7 +174,7 @@ jobs:
           cat validation_results.md
 
       - name: Comment on PR
-        uses: actions/github-script@v6
+        uses: actions/github-script@v7
         with:
           script: |
             const fs = require('fs');

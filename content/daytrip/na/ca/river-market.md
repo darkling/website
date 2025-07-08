@@ -5,6 +5,7 @@ lat: '49.20013210004652'
 lng: '-122.91143688619997'
 location: River Market, 810, Quayside Drive, Quayside, New Westminster, Metro Vancouver
   Regional District, British Columbia, V3M 6B9, Canada
+external_url: https://rivermarket.ca/things-you-should-know-about-river-market-before-planning-your-trip/
 title: River Market
 ---
 

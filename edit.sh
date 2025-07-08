@@ -94,6 +94,9 @@ while :; do
             s)
                 read -p "slug: " slug
                 sed -i -e "s,^slug:.*\$,slug: ${slug}," ${file}
+                newdir=$(dirname ${slug})
+                newdir=${newdir/daytrip\//}
+                mkdir -p ${newdir}
                 mv ${file} ${slug#daytrip/}.md
                 file=${slug#daytrip/}.md
                 ;;

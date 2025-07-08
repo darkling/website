@@ -1,10 +1,10 @@
 ---
 slug: "daytrip/sa/co/villa-de-leyva"
 date: '2001-01-30T04:37:00'
-lat: '5.6330693110143475'
-lng: '-73.52874755859375'
-location: "Calle 7A, Villa de Leiva, Villa de Leyva, Ricaurte, Boyacá, RAP (Especial)\
-  \ Central, 154001, Colombia"
+lat: 5.63373
+lng: -73.52358
+location: "Ricaurte, Boyacá, 154001, Colombia"
+external_url: https://www.villadeleyva-boyaca.gov.co/Paginas/Inicio.aspx
 title: Villa de Leyva
 ---
 

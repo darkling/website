@@ -58,7 +58,7 @@ async function loadMarkers(L, map) {
         .then(venues => {
             // jump to a place on the map if there's one in the document fragment, part 1
             let jumpToSlug;
-            if (location.hash && location.hash.match(/#daytrip/)) {
+            if (location.hash && location.hash.match(/#\/?daytrip/)) {
                 jumpToSlug = decodeURIComponent(location.hash).substr(1); // remove #
             }
 
@@ -68,9 +68,9 @@ async function loadMarkers(L, map) {
                 if (v.external_url) {
                     popupText += `&nbsp;&nbsp;<a href="${v.external_url}" target="_blank" class="external-link" title="Website"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>`;
                 }
-                // If the venue has a location, append it to the popup text
-                if (v.location) {
-                    popupText += `<br><div class="popup-location">${v.location}</div>`;
+                // If the venue has a description, append it to the popup text
+                if (v.description) {
+                    popupText += `<br><div class="popup-description">${v.description}</div>`;
                 }
                 // If the venue has a poster, add it to the popup
                 if (v.poster) {
@@ -81,9 +81,9 @@ async function loadMarkers(L, map) {
                 marker.addTo(cluster);
                 allMarkers.push(marker); // Store marker reference
                 
-                console.log({jumpToSlug, p: v.permalink, eq: jumpToSlug == v.permalink})
-                if (jumpToSlug && jumpToSlug == v.permalink) {
-                    console.log("Fly, my pretties")
+                //console.log({jumpToSlug, p: v.permalink, eq: jumpToSlug == v.permalink})
+                if (jumpToSlug && decodeURIComponent(v.permalink) == jumpToSlug) {
+                    //console.log("Fly, my pretties")
                     map.flyTo([v.lat, v.lng], 19);
                 }
             })
@@ -91,7 +91,13 @@ async function loadMarkers(L, map) {
 }
 
 // initialize Leaflet
-var map = L.map('map').setView({lon: 0, lat: 0}, 2);
+var map = L.map('map', {
+    maxBounds: [
+        [-85, -180],
+        [85, 180]
+    ],
+    maxBoundsViscosity: 0.5 // Gentle bounce at the edge
+}).setView({lon: 0, lat: 0}, 2);
 
 // add the OpenStreetMap tiles
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -169,7 +175,27 @@ document.addEventListener('DOMContentLoaded', function() {
         icon.className = "fa-solid fa-map-location-dot";
         button.append(icon);
         a.parentNode.insertBefore(button, a.nextElementSibling);
-    })
+    });
+
+
+    /* Update the Add button on this page to take you to the add screen
+       with the map location in the URL, so the add screen can show
+       the same place on the add map that you were looking at on the
+       main map. */
+    const header_add_link = document.querySelector('header#banner a[href*="add."]');
+    if (header_add_link) {
+        header_add_link.onclick = e => {
+            const u = new URL(header_add_link.href);
+            const usp = new URLSearchParams(u.search);
+            const c = map.getCenter();
+            usp.set("lat", c.lat);
+            usp.set("lon", c.lng);
+            usp.set("zoom", map.getZoom());
+            u.search = "?" + usp;
+            header_add_link.href = u;
+        }
+    }
+
 });
 
 // Locate button functionality
@@ -183,9 +209,9 @@ map.on('locationfound', function(e) {
     const userLocationIcon = L.divIcon({
         html: '📍',
         className: 'user-location-icon',
-        iconSize: [40, 40],
+        iconSize: [64, 64],
         iconAnchor: [20, 40],
-        popupAnchor: [0, -40]
+        popupAnchor: [10, -20]
     });
     
     // Add a marker at the user's location with the custom pin icon
@@ -193,7 +219,7 @@ map.on('locationfound', function(e) {
         map.removeLayer(window._userLocationMarker);
     }
     window._userLocationMarker = L.marker(e.latlng, {icon: userLocationIcon}).addTo(map)
-        .bindPopup('You are here!').openPopup();
+        .bindPopup('<div class="you-header">You are here!</div>').openPopup();
     // Auto-close the popup after 3 seconds
     setTimeout(function() {
         if (window._userLocationMarker) {
@@ -210,7 +236,7 @@ map.on('locationerror', function(e) {
 const clusterToggleBtn = document.getElementById('cluster-toggle-btn');
 let clusteringEnabled = true;
 
-clusterToggleBtn.addEventListener('click', function() {
+if (clusterToggleBtn) clusterToggleBtn.addEventListener('click', function() {
     if (clusteringEnabled) {
         // Disable clustering
         map.removeLayer(cluster);

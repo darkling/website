@@ -4,6 +4,7 @@ date: 2025-05-25T10:43:58
 lat: 52.4778489
 lng: -1.9109452
 location: Black Sabbath, Broad Street, Ladywood, Park Central, Birmingham, West Midlands, England, B1 2HP, United Kingdom
+external_url: https://blacksabbathbench.co.uk
 title: Black Sabbath Bridge
 poster: "Stuart Langridge"
 ---

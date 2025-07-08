@@ -7,5 +7,4 @@ location: Jarrow Hall, Church Bank, Jarrow, South Shields, Tyne and Wear NE32 3D
 title: Jarrow Hall
 external_url: https://jarrowhall.com
 ---
-
-
+Anglo-Saxon Farm and Village, and Bede Museum
