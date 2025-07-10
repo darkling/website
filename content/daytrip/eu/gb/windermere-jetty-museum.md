@@ -1,5 +1,5 @@
 ---
-slug: "daytrip/eu/gb/windermere-jetty"
+slug: "daytrip/eu/gb/windermere-jetty-museum"
 date: "2025-07-10T03:58:06.815Z"
 poster: "AndiBing"
 lat: "54.370778"
