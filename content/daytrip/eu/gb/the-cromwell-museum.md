@@ -4,7 +4,7 @@ date: "2025-07-11T14:31:09.368Z"
 poster: "Limehouse"
 lat: "52.330868"
 lng: "-0.184536"
-location: "The Cromwell Museum, Grammar School Walk, Huntingdon, Cambridgeshire, PE29 3LF"
+location: "Grammar School Walk, Huntingdon, Cambridgeshire, PE29 3LF"
 title: "The Cromwell Museum"
 external_url: https://www.cromwellmuseum.org/
 ---
