@@ -4,7 +4,7 @@ date: "2025-07-12T07:00:57.008Z"
 poster: "fancybone"
 lat: "49.29804"
 lng: "-123.117547"
-location: "Nine O'Clock Gun, Stanley Park Seawall, Vancouver, British Columbia, V6G, Canada"
+location: "Stanley Park Seawall, Vancouver, British Columbia, V6G, Canada"
 title: "Nine O'Clock Gun"
 external_url: https://stanleyparkvan.com/stanley-park-van-attraction-nine-oclock-gun.html
 ---
