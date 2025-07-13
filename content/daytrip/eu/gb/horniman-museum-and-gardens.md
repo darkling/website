@@ -8,4 +8,4 @@ location: "Forest Hill, London, SE23 3PQ, United Kingdom"
 title: "Horniman Museum and Gardens"
 external_url: https://www.horniman.ac.uk/
 ---
-Lots of interesting collections from natural history, archives, anthropology and mroe.
+Lots of interesting collections from natural history, archives, anthropology, and more.
