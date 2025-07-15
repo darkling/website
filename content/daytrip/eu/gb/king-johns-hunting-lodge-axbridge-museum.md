@@ -4,7 +4,7 @@ date: "2025-07-15T10:28:32.105Z"
 poster: "Ian"
 lat: "51.287125"
 lng: "-2.817634"
-location: "King John's Hunting Lodge (Axbridge Museum), The Square, Axbridge, Somerset, England, BS26 2AR, United Kingdom"
+location: "The Square, Axbridge, Somerset, England, BS26 2AR, United Kingdom"
 title: "King John's Hunting Lodge (Axbridge Museum)"
 external_url: https://www.nationaltrust.org.uk/visit/somerset/king-johns-hunting-lodge
 ---
