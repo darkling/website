@@ -9,3 +9,4 @@ title: 'HMS Belfast'
 external_url: https://www.iwm.org.uk/visits/hms-belfast
 ---
 A museum ship, permanently berthed on the River Thames in London. A fascinating place to visit, especially if you're not familiar with the insides and day-to-day functioning of a warship.
+The most nerdy fact about HMS Belfast is that the forward guns are trained upon [London Gateway Services](https://en.wikipedia.org/wiki/London_Gateway_services) on the M1.
